@@ -1,0 +1,130 @@
+/* Загальний фон */
+.anime-page {
+    padding: 40px 0;
+    background: linear-gradient(135deg, #020617, #0f172a);
+    color: #e2e8f0;
+}
+body{
+    background: linear-gradient(135deg, #020617, #0f172a);
+}
+/* Скляний контейнер */
+.anime-glass {
+    display: flex;
+    gap: 40px;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 0 40px rgba(0,0,0,0.6);
+}
+
+/* Обкладинка */
+.anime-cover img {
+    width: 260px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.7);
+}
+
+/* Заголовок */
+.anime-title {
+    font-size: 2.6rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, #38bdf8, #a855f7, #ec4899);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Метадані */
+.anime-meta {
+    display: flex;
+    gap: 12px;
+    margin: 12px 0 20px;
+}
+
+.anime-meta span {
+    padding: 6px 12px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    font-size: 0.9rem;
+}
+
+/* Опис */
+.anime-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #cbd5e1;
+    margin-bottom: 20px;
+}
+
+/* Теги */
+.anime-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.anime-tags span {
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #0ea5e9, #6366f1);
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Кнопка */
+.anime-btn {
+    margin-top: 20px;
+    padding: 12px 24px;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #6366f1, #ec4899);
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform .2s, box-shadow .2s;
+}
+
+.anime-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(236,72,153,0.6);
+}
+
+/* Characters */
+.section-title {
+    font-size: 1.8rem;
+    background: linear-gradient(90deg, #38bdf8, #a855f7);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-top: 40px;
+}
+
+.char-list {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.char-card {
+    width: 140px;
+    text-align: center;
+}
+
+.char-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.char-card p {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #e2e8f0;
+}

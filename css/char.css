@@ -1,0 +1,77 @@
+/* Контейнер персонажів */
+.char-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;     /* відступи між картками */
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* Картка персонажа */
+.char-card {
+    width: 160px;
+    padding: 15px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    cursor: pointer;
+    transition: 0.35s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+/* Фото */
+.char-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: 0.35s ease;
+}
+
+/* Ім'я */
+.char-card p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #ddd;
+    transition: 0.35s ease;
+}
+
+/* НЕОНОВИЙ ФОН ПРИ ХОВЕРІ */
+.char-card:hover {
+    transform: translateY(-6px) scale(1.05);
+    border-color: rgba(0,255,255,0.6);
+}
+
+/* Анімація переливання неону */
+.char-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+    rgba(0,255,255,0.25),
+    rgba(255,0,255,0.25),
+    rgba(0,128,255,0.25)
+    );
+    opacity: 0;
+    transition: 0.45s ease;
+    filter: blur(25px);
+}
+
+/* Активний перелив */
+.char-card:hover::before {
+    opacity: 1;
+}
+
+/* Білий світний текст */
+.char-card:hover p {
+    color: #fff;
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+/* Підсвітка фото */
+.char-card:hover img {
+    box-shadow: 0 0 20px rgba(0,255,255,0.5);
+}

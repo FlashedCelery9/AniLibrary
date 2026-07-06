@@ -1,0 +1,174 @@
+/* Фон сайту */
+body {
+    background: radial-gradient(circle at top, #0a0f1f, #050811, #000);
+    color: #ddd;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Головний блок */
+.manga-glass {
+    display: flex;
+    gap: 30px;
+    padding: 40px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 0 25px rgba(0,255,255,0.3);
+}
+
+.manga-cover img {
+    width: 280px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,255,255,0.4);
+}
+
+.manga-title {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #fff;
+    text-shadow: 0 0 15px #0ff;
+}
+
+.manga-meta span {
+    margin-right: 15px;
+    color: #0ff;
+}
+
+.manga-desc {
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+.manga-tags span {
+    background: rgba(0,255,255,0.2);
+    padding: 6px 12px;
+    border-radius: 12px;
+    margin-right: 10px;
+    color: #fff;
+}
+
+/* Кнопка */
+.manga-btn {
+    margin-top: 20px;
+    padding: 12px 20px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #0ff, #f0f);
+    border: none;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.manga-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #0ff;
+}
+
+/* Персонажі */
+.char-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.char-card {
+    width: 160px;
+    padding: 15px;
+    border-radius: 18px;
+    background: rgba(15, 15, 30, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.12);
+    transition: 0.35s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* Неоновий перелив */
+.char-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+    rgba(0,255,255,0.25),
+    rgba(255,0,0,0.25),
+    rgba(255,0,255,0.25),
+    rgba(0,128,255,0.25)
+    );
+    opacity: 0;
+    transition: 0.45s ease;
+    filter: blur(25px);
+}
+
+.char-card:hover::before {
+    opacity: 1;
+}
+
+.char-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: 0.35s ease;
+}
+
+.char-card:hover img {
+    box-shadow: 0 0 20px rgba(0,255,255,0.5);
+}
+
+.char-card p {
+    margin-top: 10px;
+    color: #ddd;
+    transition: 0.35s ease;
+}
+
+.char-card:hover p {
+    color: #fff;
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+/* Модальне вікно */
+.trailer-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(6px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.trailer-content {
+    position: relative;
+    width: 80%;
+    max-width: 900px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 25px rgba(0,255,255,0.4);
+}
+
+#trailer-frame {
+    width: 100%;
+    height: 500px;
+    border-radius: 15px;
+}
+
+.close-btn {
+    position: absolute;
+    top: -10px;
+    right: 15px;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.close-btn:hover {
+    color: #0ff;
+}

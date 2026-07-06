@@ -1,0 +1,77 @@
+.viewall-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.viewall-item {
+    display: flex;
+    margin-bottom: 16px;
+    align-items: center;
+    gap: 18px;
+    padding: 16px;
+    border-radius: 14px;
+
+    background: linear-gradient(135deg, rgba(120, 60, 255, 0.25), rgba(255, 60, 180, 0.25));
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.viewall-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 18px rgba(160, 80, 255, 0.4);
+}
+
+.viewall-item img {
+    width: 70px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 80, 200, 0.4);
+}
+
+.viewall-info h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    background: linear-gradient(90deg, #c86bff, #ff5bd7);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.viewall-info p {
+    margin: 4px 0 0;
+    font-size: 0.9rem;
+    color: #dcdcdc;
+}
+
+.scroll-container {
+    height: 600px; /* фіксована висота */
+    overflow-y: auto; /* вертикальна прокрутка */
+    padding-right: 6px; /* щоб скролбар не перекривав контент */
+
+    /* Стиль скролу під твій сайт */
+    scrollbar-width: thin;
+    scrollbar-color: #c86bff #1a1a1a;
+}
+
+/* Chrome / Edge / Opera */
+.scroll-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    border-radius: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #c86bff, #ff5bd7);
+    border-radius: 10px;
+}
+.scroll-container::-webkit-scrollbar-button {
+    display: none; /* прибирає стрілки */
+}

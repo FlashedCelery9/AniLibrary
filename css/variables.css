@@ -1,0 +1,16 @@
+:root {
+    --bg-main: #050816;
+    --bg-card: #0f172a;
+    --accent1: #a855f7;
+    --accent2: #ec4899;
+    --accent3: #38bdf8;
+    --text-main: #e5e7eb;
+    --text-muted: #9ca3af;
+    --border-soft: #1f2937;
+    --radius-lg: 18px;
+    --radius-md: 12px;
+    --radius-sm: 8px;
+    --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.9);
+    --transition-fast: 0.2s ease;
+    --transition-med: 0.35s ease;
+}

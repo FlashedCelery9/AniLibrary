@@ -1,10 +1,178 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
+    <meta charset="UTF-8" />
+    <title>AnimeLibrary</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/latest-releases.css">
+    <link rel="stylesheet" href="css/cardsViewAll.css"   >
+    <link rel="stylesheet" href="css/mobileHeader.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/popular-anime.css"></head>
 <body>
-$END$
+<div class="page">
+    <header>
+        <div class="logo-wrap">
+            <img src="images/logo-anime-library.svg" alt="AnimeLibrary Logo" />
+            <div class="logo-text">AnimeLibrary</div>
+        </div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#latest">Anime</a>
+            <a href="#manga">Manga</a>
+            <a href="#latest">Top Lists</a>
+            <a href="#">News</a>
+        </nav>
+
+        <div class="header-right">
+            <div class="search">
+                <input id="search-anime-by-name" type="text" placeholder="Search anime or manga..." />
+                <span class="search-icon">🔍</span>
+
+            </div>
+            <div id="search-dropdown" class="search-dropdown desktop"></div>
+            <button class="btn">Login</button>
+            <button class="btn btn-primary">Register</button>
+        </div>
+    </header>
+    <header class="mobile-header">
+
+        <div class="mobile-top">
+            <div class="logo-wrap">
+                <img src="images/logo-anime-library.svg" alt="AnimeLibrary Logo" />
+                <div class="logo-text">AnimeLibrary</div>
+            </div>
+
+            <button class="burger-btn">☰</button>
+        </div>
+
+        <div class="mobile-menu">
+            <nav class="mobile-nav">
+                <a href="#">Home</a>
+                <a href="#latest">Anime</a>
+                <a href="#manga">Manga</a>
+                <a href="#latest">Top Lists</a>
+                <a href="#">News</a>
+            </nav>
+
+            <div class="mobile-search">
+                <input id="mobile-search-input" type="text" placeholder="Search anime or manga..." />
+                <span class="search-icon">🔍</span>
+
+            </div>
+            <div id="search-dropdown-mobile" class="search-dropdown-mobile"></div>
+
+            <div class="mobile-auth">
+                <button class="btn">Login</button>
+                <button class="btn btn-primary">Register</button>
+            </div>
+        </div>
+
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1 class="hero-title">Welcome to AnimeLibrary</h1>
+            <p class="hero-subtitle">
+                Explore the best <span>Anime</span> and <span>Manga</span> from all over the world.
+            </p>
+            <div class="hero-actions">
+                <button class="btn btn-primary" id="browse-now-btn">Browse Now</button>
+                <button class="btn" id="go-to-top-btn">Top Lists</button>
+            </div>
+        </div>
+
+        <div class="hero-illustration">
+            <img src="images/hero-anime-library.svg" alt="AnimeLibrary Hero" />
+            <div class="hero-glow"></div>
+        </div>
+    </section>
+
+    <section class="sections" id="latest">
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <div class="card-title">Latest Releases</div>
+                    <div class="card-subtitle">Fresh Anime & Manga just added</div>
+                </div>
+                <div class="card-header-right">
+                    <button class="tab-btn active" value="anime">Anime</button>
+                    <button class="tab-btn" value="anime">Manga</button>
+                    <button class="btn btn-primary" id="view-all-latest">View All</button>
+
+                </div>
+            </div>
+
+            <div class="carousel" id="latest-carousel-container">
+                <div class="carousel-track" id="latest-carousel">
+
+                </div>
+                <div class="carousel-arrows" id="carusel-latest">
+                    <button class="arrow-btn" data-target="latest-carousel-container" data-dir="left">◀</button>
+                    <button class="arrow-btn" data-target="latest-carousel-container" data-dir="right">▶</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <div class="card-title">Popular Anime</div>
+                    <div class="card-subtitle">Top rated series right now</div>
+                </div>
+                <button class="btn btn-primary">See More</button>
+            </div>
+
+            <div class="list" id="popular-anime">
+            </div>
+        </div>
+    </section>
+
+    <section id="manga">
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <div class="card-title">Top Manga</div>
+                    <div class="card-subtitle">Legendary stories & new hits</div>
+                </div>
+                <button class="btn btn-primary">View All</button>
+            </div>
+
+            <div class="carousel" id="manga-carousel">
+                <div class="carousel-track" id="top-manga-container">
+
+                </div>
+                <div class="carousel-arrows">
+                    <button class="arrow-btn" data-target="manga-carousel" data-dir="left">◀</button>
+                    <button class="arrow-btn" data-target="manga-carousel" data-dir="right">▶</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <button class="footer-link">About</button>
+                <button class="footer-link">Contact</button>
+                <button class="footer-link">Privacy Policy</button>
+                <button class="footer-link">Terms of Service</button>
+            </div>
+
+            <div class="footer-bottom">
+                © 2026 AnimeLibrary · Crafted with passion
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+<script type="module" src="js/script.js"></script>
+<script type="module" src="js/getters.js"></script>
+
 </body>
 </html>

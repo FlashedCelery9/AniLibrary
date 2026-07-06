@@ -1,0 +1,70 @@
+/* Popular Anime — компактні картки */
+
+.pa-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 10px;
+}
+
+/* Картка */
+.pa-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: linear-gradient(145deg, #020617, #0f172a);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-md);
+    padding: 10px;
+    width: 100%;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.pa-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.45);
+}
+
+/* Картинка */
+.pa-thumb {
+    position: relative;
+    width: 100%;
+    height: 180px; /* НЕ витягнуто, ідеальна пропорція */
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.pa-thumb img {
+    width: 60%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Рейтинг */
+.pa-rating {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: linear-gradient(135deg, #ec4899, #a855f7);
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+/* Градієнтний текст під картинкою */
+.pa-title {
+    font-size: 1rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #a855f7, #ec4899, #38bdf8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    line-height: 1.25;
+    margin-top: 4px;
+}
